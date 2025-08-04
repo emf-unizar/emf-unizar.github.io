@@ -8,4 +8,4 @@ Se accede a ella en
 
 <a href="https://emf-unizar.github.io/index.html" target="_blank">Abrir la página</a>
 
-La idea es usarla para el libro de EDO
+La idea es usar esta página (o una subpágina) para el libro de EDO
