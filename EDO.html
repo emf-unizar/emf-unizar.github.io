@@ -13,16 +13,11 @@
         .texto-principal { color: #3a6a7e !important; }
         
         body { font-family: "Verdana", sans-serif; }
-        /*.portada { max-width: 100%; height: auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 4px; }*/
-        .btn-amazon { background-color: #be312c !important; color: white !important; transition: 0.3s; }
+        .portada { max-width: 100%; height: auto; box-shadow: 0 16px 32px rgba(0,0,0,0.5); border-radius: 4px; }
+        .btn-amazon { background-color:  #be312c !important; color: white !important; transition: 0.3s; }
         .btn-amazon:hover { background-color: #3a6a7e !important; opacity: 0.9; }
+        .tablink { cursor: pointer; font-weight: bold; }
         .parte-header { border-left: 6px solid #be312c; padding-left: 12px; margin-top: 24px; font-weight: bold; }
-        .portada { 
-            max-width: 100%; 
-            height: auto; 
-            box-shadow: 0 16px 32px rgba(0,0,0,0.5); /* Sombra duplicada en tamaño y opacidad */
-            border-radius: 4px; 
-        }
     </style>
 </head>
 <body class="w3-light-grey">
@@ -31,97 +26,158 @@
 <header class="w3-container color-portada-principal w3-center w3-padding-48 w3-card-4">
   <h1 class="w3-xxlarge"><b>ECUACIONES DIFERENCIALES ORDINARIAS</b></h1>
   <p class="w3-large">Eduardo Martínez Fernández</p>
-  <p class="w3-medium">Universidad de Zaragoza</p>
 </header>
 
-<div class="w3-content w3-white w3-padding-large w3-margin-top w3-card-2" style="max-width:900px">
+<div class="w3-content w3-white w3-margin-top w3-card-2" style="max-width:1100px">
   
-  <!-- Fila de Portada y Descripción -->
-  <div class="w3-row">
-    <div class="w3-col l4 m5 s12 w3-container w3-center w3-padding-24">
-      <img src="portada.jpg" alt="Portada del libro" class="portada">
-      <p class="w3-small w3-text-grey w3-margin-top">ISBN: 9798280896468</p>
-      <div class="w3-container w3-padding-16">
-        <a href="https://www.amazon.es/dp/9798280896468" class="w3-button btn-amazon w3-large w3-round w3-block">Comprar en Amazon</a>
+  <!-- Menú de Navegación por Pestañas -->
+  <div class="w3-bar color-portada-acento"  style="display:flex;">
+    <button class="w3-bar-item w3-button tablink w3-bottombar w3-border-blue-gray" onclick="openTab(event,'Principal')">Información General</button>
+    <button class="w3-bar-item w3-button w3-bottombar tablink" onclick="openTab(event,'Contenidos')">Tabla de Contenidos</button>
+    <button class="w3-bar-item w3-button w3-bottombar tablink" onclick="openTab(event,'Erratas')">Fe de Erratas</button>
+    <button class="w3-bar-item w3-button w3-bottombar tablink" style="flex-grow:1;"></button>
+  </div>
+
+  <!-- PESTAÑA 1: INFORMACIÓN PRINCIPAL -->
+  <div id="Principal" class="w3-container tab w3-padding-large">
+    <div class="w3-row">
+      <div class="w3-col l4 m5 s12 w3-container w3-center w3-padding-24">
+        <img src="portada.jpg" alt="Portada del libro" class="portada">
+        <p class="w3-small w3-text-grey w3-margin-top">ISBN: 9798280896468 ***</p>
+        <a href="https://www.amazon.es/dp/9798280896468" class="w3-button btn-amazon w3-large w3-round w3-block w3-margin-top">Comprar en Amazon</a>
+      </div>
+      <div class="w3-col l8 m7 s12 w3-container w3-padding-large">
+        <h3 class="texto-principal"><b>Sobre el libro</b></h3>
+        <p class="w3-justify">Este manual nace de la experiencia docente en el Grado en Matemáticas de la Universidad de Zaragoza [2]. Su filosofía es <b>"motivar los conceptos antes de su formalización"</b>, evitando demostrar teoremas antes de que el estudiante intuya su necesidad [2].</p>
+        <p class="w3-justify">Con <b>646 páginas</b>, el texto integra aplicaciones reales y figuras de alta calidad generadas mediante <b>TikZ, Python y Matplotlib</b> [3, 4].</p>
+        <div class="w3-panel w3-light-grey w3-leftbar w3-border-red">
+          <p class="w3-medium w3-serif"><i>"Se comienza estudiando los casos más sencillos, para ir progresando en dificultad hasta llegar al estudio del caso general" [2].</i></p>
+        </div>
+        <h4>Detalles Técnicos</h4>
+        <ul class="w3-ul">
+          <li><b>Extensión:</b> 646 páginas.</li>
+          <li><b>Contenido:</b> Ecuaciones lineales (CC y CV) y sistemas no lineales [5, 6].</li>
+          <li><b>Extras:</b> Apéndices sobre complejos, teoría espectral y cálculo [5].</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- PESTAÑA 2: TABLA DE CONTENIDOS -->
+  <div id="Contenidos" class="w3-container tab w3-padding-large" style="display:none">
+    <h3 class="texto-principal w3-border-bottom w3-padding-16"><b>Índice Detallado</b></h3>
+
+    <p class="parte-header texto-acento"><b>Introducción</b></p>    
+    <p class="w3-large parte-header texto-acento">Parte A. ECUACIONES LINEALES CON COEFICIENTES CONSTANTES</p>
+    <div class="w3-row w3-small">
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>I.</b> Ecuaciones escalares</li>
+          <li><b>II.</b> Sistemas diferenciales: introducción</li>
+          <li><b>III.</b> Exponencial matricial</li>
+          <li><b>IV.</b> Sistemas diferenciales: solución</li>
+          <li><b>V.</b> Ecuaciones de orden superior</li>
+        </ul>
+      </div>
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>VI.</b> Transformada de Laplace</li>
+          <li><b>VII.</b> Diagrama de fases</li>
+          <li><b>VIII.</b> Estabilidad</li>
+          <li><b>IX.</b> Ecuaciones con impulsos instantáneos</li>
+        </ul>
       </div>
     </div>
 
-    <div class="w3-col l8 m7 s12 w3-container w3-padding-large">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 texto-principal"><b>Resumen de la obra</b></h3>
-      <p class="w3-justify">
-        Este manual nace de la experiencia docente en el Grado en Matemáticas de la Universidad de Zaragoza [4]. Su enfoque principal es servir de guía progresiva, comenzando por los casos más sencillos hasta alcanzar el estudio del caso general, siempre con la filosofía de <b>motivar los conceptos antes de su formalización</b> [4].
-      </p>
-      <p class="w3-justify">
-        A través de sus 646 páginas, el autor integra aplicaciones reales ilustradas mediante <b>TikZ, Python y Matplotlib</b>, facilitando la comprensión visual de sistemas complejos [5].
-      </p>
-
-      
+    <p class="w3-large parte-header texto-acento">Parte B. ECUACIONES LINEALES CON COEFICIENTES VARIABLES</p>
+    <div class="w3-row w3-small">
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>X.</b> Ecuaciones escalares</li>
+          <li><b>XI.</b> Sistemas diferenciales: teoría general</li>
+          <li><b>XII.</b> Métodos de resolución</li>
+        </ul>
+      </div>
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>XIII.</b> Estabilidad</li>
+          <li><b>XIV.</b> Sistemas lineales periódicos</li>
+          <li><b>XV.</b> Problemas lineales de contorno</li>
+        </ul>
+      </div>
     </div>
+
+    <p class="w3-large parte-header texto-acento">Parte C. ECUACIONES NO LINEALES</p>
+    <div class="w3-row w3-small">
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>XVI.</b> Ecuaciones escalares autónomas</li>
+          <li><b>XVII.</b> Ecuaciones escalares no autónomas</li>
+          <li><b>XVIII.</b> Existencia y unicidad (PVI)</li>
+          <li><b>XIX.</b> Métodos numéricos</li>
+        </ul>
+      </div>
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>XX.</b> Dependencia de datos y parámetros</li>
+          <li><b>XXI.</b> Ecuaciones implícitas</li>
+          <li><b>XXII.</b> Estabilidad de soluciones</li>
+          <li><b>XXIII.</b> Diagrama de fases en el plano</li>
+        </ul>
+      </div>
+    </div>
+    <p class="parte-header texto-acento"><b>Apéndices</b></p>
+    <p class="parte-header texto-acento"><b>Bibliografía</b></p>
+    <p class="parte-header texto-acento"><b>Índice alfabético</b></p>
   </div>
+
+  <!-- PESTAÑA 3: FE DE ERRATAS -->
+  <div id="Erratas" class="w3-container tab w3-padding-large" style="display:none">
+    <h3 class="texto-principal"><b>Fe de Erratas</b></h3>
+    <p>Mantener un manual de 646 páginas libre de errores es un desafío constante. A continuación se listan las correcciones identificadas en la edición de Mayo de 2025.</p>
+    
+    <table class="w3-table-all w3-hoverable w3-margin-top">
+      <tr class="color-portada-principal">
+        <th>Página</th>
+        <th>Ubicación</th>
+        <th>Error detectado</th>
+        <th>Corrección</th>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>No se han reportado errores hasta la fecha.</td>
+        <td>-</td>
+      </tr>
+    </table>
+    <p class="w3-panel w3-pale-red w3-leftbar w3-border-red w3-padding-16">
+      Si detectas cualquier error tipográfico o matemático, por favor contacta con el autor para incluirlo en futuras revisiones.
+    </p>
+  </div>
+
 </div>
 
-<div class="w3-content w3-white w3-padding-large w3-margin-top w3-card-2" style="max-width:900px">
-  <div class="w3-row">
-    <!-- Tabla de Contenidos -->
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 texto-principal"><b>Contenidos</b></h3>
-      
-      <div class="w3-row">
-        <div class="w3-col s12">
-          <p class="w3-large parte-header texto-acento">Parte A. ECUACIONES LINEALES CON COEFICIENTES CONSTANTES</p>
-          <ul class="w3-ul w3-hoverable w3-small">
-            <li><b class="texto-principal">Capítulo I.</b> Ecuaciones escalares</li>
-            <li><b class="texto-principal">Capítulo II.</b> Sistemas diferenciales: introducción</li>
-            <li><b class="texto-principal">Capítulo III.</b> Exponencial matricial</li>
-            <li><b class="texto-principal">Capítulo IV.</b> Sistemas diferenciales: solución</li>
-            <li><b class="texto-principal">Capítulo V.</b> Ecuaciones de orden superior</li>
-            <li><b class="texto-principal">Capítulo VI.</b> Transformada de Laplace</li>
-            <li><b class="texto-principal">Capítulo VII.</b> Diagrama de fases</li>
-            <li><b class="texto-principal">Capítulo VIII.</b> Estabilidad</li>
-            <li><b class="texto-principal">Capítulo IX.</b> Ecuaciones con impulsos instantáneos</li>
-          </ul>
+<div class="w3-margin-bottom"></div>
+<script>
+function openTab(evt, tabName) {
+  var i, x, tablinks;
+  // Ocultar todas las pestañas
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  // Quitar el color rojo de todos los bordes inferiores
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-border-blue-gray");
+  }
+  // Mostrar la pestaña seleccionada
+  document.getElementById(tabName).style.display = "block";
+  // Añadir el color rojo al botón que recibió el clic
+  evt.currentTarget.classList.add("w3-border-blue-gray");
+}
 
-          <p class="w3-large parte-header texto-acento">Parte B. ECUACIONES LINEALES CON COEFICIENTES VARIABLES</p>
-          <ul class="w3-ul w3-hoverable w3-small">
-            <li><b class="texto-principal">Capítulo X.</b> Ecuaciones escalares</li>
-            <li><b class="texto-principal">Capítulo XI.</b> Sistemas diferenciales: teoría general</li>
-            <li><b class="texto-principal">Capítulo XII.</b> Métodos de resolución</li>
-            <li><b class="texto-principal">Capítulo XIII.</b> Estabilidad</li>
-            <li><b class="texto-principal">Capítulo XIV.</b> Sistemas lineales con coeficientes periódicos</li>
-            <li><b class="texto-principal">Capítulo XV.</b> Problemas lineales de contorno</li>
-          </ul>
-
-          <p class="w3-large parte-header texto-acento">Parte C. ECUACIONES NO LINEALES</p>
-          <ul class="w3-ul w3-hoverable w3-small">
-            <li><b class="texto-principal">Capítulo XVI.</b> Ecuaciones escalares autónomas</li>
-            <li><b class="texto-principal">Capítulo XVII.</b> Ecuaciones escalares no autónomas</li>
-            <li><b class="texto-principal">Capítulo XVIII.</b> Existencia y unicidad de soluciones (PVI)</li>
-            <li><b class="texto-principal">Capítulo XIX.</b> Métodos numéricos para problemas de valor inicial</li>
-            <li><b class="texto-principal">Capítulo XX.</b> Dependencia respecto de datos iniciales y parámetros</li>
-            <li><b class="texto-principal">Capítulo XXI.</b> Ecuaciones diferenciales implícitas</li>
-            <li><b class="texto-principal">Capítulo XXII.</b> Estabilidad de soluciones</li>
-            <li><b class="texto-principal">Capítulo XXIII.</b> Diagrama de fases de un sistema autónomo plano</li>
-          </ul>
-
-          <p class="w3-large parte-header texto-principal">APÉNDICES</p>
-          <ul class="w3-ul w3-hoverable w3-small w3-margin-bottom">
-            <li><b>Apéndice A.</b> Los números complejos</li>
-            <li><b>Apéndice B.</b> Teoría espectral</li>
-            <li><b>Apéndice C.</b> Cálculo diferencial e integral</li>
-            <!--<li><b>Bibliografía e Índice alfabético</b></li>-->
-          </ul>
-        </div>
-
-          <p class="w3-large parte-header texto-principal">Bibliografía e Índice alfabético</p>
-        </div>
-    </div>
-    </div>
-</div>
-
-<!-- Pie de página -->
-<footer class="w3-container color-portada-principal w3-center w3-padding-24 w3-margin-top">
-  <p>© Eduardo Martínez Fernández - Universidad de Zaragoza</p>
-  <p class="w3-small">Todos los derechos reservados. Prohibida la reproducción total o parcial sin permiso previo [6].</p>
-</footer>
+</script>
 
 </body>
 </html>
