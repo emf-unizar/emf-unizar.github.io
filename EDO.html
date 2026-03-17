@@ -1,43 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eduardo Martínez Fernández</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Ecuaciones Diferenciales Ordinarias - Eduardo Martínez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        /* Colores extraídos de la portada */
+        .color-portada-principal { background-color: #3a6a7e !important; color: white !important; }
+        .color-portada-acento { background-color: #be312c !important; color: white !important; }
+        .texto-acento { color: #be312c !important; }
+        .texto-principal { color: #3a6a7e !important; }
+        
+        body { font-family: "Verdana", sans-serif; }
+        /*.portada { max-width: 100%; height: auto; box-shadow: 0 8px 16px rgba(0,0,0,0.3); border-radius: 4px; }*/
+        .btn-amazon { background-color: #be312c !important; color: white !important; transition: 0.3s; }
+        .btn-amazon:hover { background-color: #3a6a7e !important; opacity: 0.9; }
+        .parte-header { border-left: 6px solid #be312c; padding-left: 12px; margin-top: 24px; font-weight: bold; }
+        .portada { 
+            max-width: 100%; 
+            height: auto; 
+            box-shadow: 0 16px 32px rgba(0,0,0,0.5); /* Sombra duplicada en tamaño y opacidad */
+            border-radius: 4px; 
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Ecuaciones Diferenciales Ordinarias</h1>
-    <p><span style="color:red;">(En construcción)</span></p>
-  </header>
+<body class="w3-light-grey">
 
-  <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<!-- Cabecera -->
+<header class="w3-container color-portada-principal w3-center w3-padding-48 w3-card-4">
+  <h1 class="w3-xxlarge"><b>ECUACIONES DIFERENCIALES ORDINARIAS</b></h1>
+  <p class="w3-large">Eduardo Martínez Fernández</p>
+  <p class="w3-medium">Universidad de Zaragoza</p>
+</header>
 
-  <main>
-    <section id="libro">
-      <h2>Libro <emph>Ecuaciones Diferenciales Ordinarias</emph></h2>
-      <p>Será publicado en Amazon KDP. Razonar los motivos</p>
-      <p>Enlace a <a href="url de amazon">Amazon</a></p>
-    </section>
+<div class="w3-content w3-white w3-padding-large w3-margin-top w3-card-2" style="max-width:900px">
+  
+  <!-- Fila de Portada y Descripción -->
+  <div class="w3-row">
+    <div class="w3-col l4 m5 s12 w3-container w3-center w3-padding-24">
+      <img src="portada.jpg" alt="Portada del libro" class="portada">
+      <p class="w3-small w3-text-grey w3-margin-top">ISBN: 9798280896468</p>
+      <div class="w3-container w3-padding-16">
+        <a href="https://www.amazon.es/dp/9798280896468" class="w3-button btn-amazon w3-large w3-round w3-block">Comprar en Amazon</a>
+      </div>
+    </div>
 
-    <section id="asignatura">
-      <h2>Asignatura</h2>
-      <p>Detalles de la asignatura</p>
-      <ul>
-        <li><strong>Ecuaciones lineales con coeficienctes constantes</strong> </li>
-        <li><strong>Ecuaciones lineales con coeficienctes variables</strong> </li>
-        <li><strong>Ecuaciones no lineales</strong> </li>
-      </ul>
-    </section>
-  </main>
+    <div class="w3-col l8 m7 s12 w3-container w3-padding-large">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 texto-principal"><b>Resumen de la obra</b></h3>
+      <p class="w3-justify">
+        Este manual nace de la experiencia docente en el Grado en Matemáticas de la Universidad de Zaragoza [4]. Su enfoque principal es servir de guía progresiva, comenzando por los casos más sencillos hasta alcanzar el estudio del caso general, siempre con la filosofía de <b>motivar los conceptos antes de su formalización</b> [4].
+      </p>
+      <p class="w3-justify">
+        A través de sus 646 páginas, el autor integra aplicaciones reales ilustradas mediante <b>TikZ, Python y Matplotlib</b>, facilitando la comprensión visual de sistemas complejos [5].
+      </p>
 
-  <footer>
-    <p>&copy; 2025 Eduardo Martínez Fernández</p>
-  </footer>
+      
+    </div>
+  </div>
+</div>
+
+<div class="w3-content w3-white w3-padding-large w3-margin-top w3-card-2" style="max-width:900px">
+  <div class="w3-row">
+    <!-- Tabla de Contenidos -->
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16 texto-principal"><b>Contenidos</b></h3>
+      
+      <div class="w3-row">
+        <div class="w3-col s12">
+          <p class="w3-large parte-header texto-acento">Parte A. ECUACIONES LINEALES CON COEFICIENTES CONSTANTES</p>
+          <ul class="w3-ul w3-hoverable w3-small">
+            <li><b class="texto-principal">Capítulo I.</b> Ecuaciones escalares</li>
+            <li><b class="texto-principal">Capítulo II.</b> Sistemas diferenciales: introducción</li>
+            <li><b class="texto-principal">Capítulo III.</b> Exponencial matricial</li>
+            <li><b class="texto-principal">Capítulo IV.</b> Sistemas diferenciales: solución</li>
+            <li><b class="texto-principal">Capítulo V.</b> Ecuaciones de orden superior</li>
+            <li><b class="texto-principal">Capítulo VI.</b> Transformada de Laplace</li>
+            <li><b class="texto-principal">Capítulo VII.</b> Diagrama de fases</li>
+            <li><b class="texto-principal">Capítulo VIII.</b> Estabilidad</li>
+            <li><b class="texto-principal">Capítulo IX.</b> Ecuaciones con impulsos instantáneos</li>
+          </ul>
+
+          <p class="w3-large parte-header texto-acento">Parte B. ECUACIONES LINEALES CON COEFICIENTES VARIABLES</p>
+          <ul class="w3-ul w3-hoverable w3-small">
+            <li><b class="texto-principal">Capítulo X.</b> Ecuaciones escalares</li>
+            <li><b class="texto-principal">Capítulo XI.</b> Sistemas diferenciales: teoría general</li>
+            <li><b class="texto-principal">Capítulo XII.</b> Métodos de resolución</li>
+            <li><b class="texto-principal">Capítulo XIII.</b> Estabilidad</li>
+            <li><b class="texto-principal">Capítulo XIV.</b> Sistemas lineales con coeficientes periódicos</li>
+            <li><b class="texto-principal">Capítulo XV.</b> Problemas lineales de contorno</li>
+          </ul>
+
+          <p class="w3-large parte-header texto-acento">Parte C. ECUACIONES NO LINEALES</p>
+          <ul class="w3-ul w3-hoverable w3-small">
+            <li><b class="texto-principal">Capítulo XVI.</b> Ecuaciones escalares autónomas</li>
+            <li><b class="texto-principal">Capítulo XVII.</b> Ecuaciones escalares no autónomas</li>
+            <li><b class="texto-principal">Capítulo XVIII.</b> Existencia y unicidad de soluciones (PVI)</li>
+            <li><b class="texto-principal">Capítulo XIX.</b> Métodos numéricos para problemas de valor inicial</li>
+            <li><b class="texto-principal">Capítulo XX.</b> Dependencia respecto de datos iniciales y parámetros</li>
+            <li><b class="texto-principal">Capítulo XXI.</b> Ecuaciones diferenciales implícitas</li>
+            <li><b class="texto-principal">Capítulo XXII.</b> Estabilidad de soluciones</li>
+            <li><b class="texto-principal">Capítulo XXIII.</b> Diagrama de fases de un sistema autónomo plano</li>
+          </ul>
+
+          <p class="w3-large parte-header texto-principal">APÉNDICES</p>
+          <ul class="w3-ul w3-hoverable w3-small w3-margin-bottom">
+            <li><b>Apéndice A.</b> Los números complejos</li>
+            <li><b>Apéndice B.</b> Teoría espectral</li>
+            <li><b>Apéndice C.</b> Cálculo diferencial e integral</li>
+            <!--<li><b>Bibliografía e Índice alfabético</b></li>-->
+          </ul>
+        </div>
+
+          <p class="w3-large parte-header texto-principal">Bibliografía e Índice alfabético</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="w3-container color-portada-principal w3-center w3-padding-24 w3-margin-top">
+  <p>© Eduardo Martínez Fernández - Universidad de Zaragoza</p>
+  <p class="w3-small">Todos los derechos reservados. Prohibida la reproducción total o parcial sin permiso previo [6].</p>
+</footer>
+
 </body>
 </html>
