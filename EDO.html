@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
-        /* Colores extraídos de la portada */
+        /* Colores similares a los de la portada */
         .color-portada-principal { background-color: #3a6a7e !important; color: white !important; }
         .color-portada-acento { background-color: #be312c !important; color: white !important; }
         .texto-acento { color: #be312c !important; }
@@ -25,13 +25,12 @@
 <!-- Cabecera -->
 <header class="w3-container color-portada-principal w3-center w3-padding-24 w3-card-4">
   <h1 class="w3-xxxlarge"><b>ECUACIONES DIFERENCIALES ORDINARIAS</b></h1>
-  <!--<p class="w3-xlarge">Eduardo Martínez Fernández</p>-->
   <p class="w3-xlarge">EDUARDO MARTÍNEZ FERNÁNDEZ</p>
 </header>
 
 <div class="w3-content w3-white w3-margin-top w3-card-2" style="max-width:1100px">
   
-  <!-- Menú de Navegación por Pestañas -->
+  <!-- Menú de Navegación (tipo tabs) -->
   <div class="w3-bar color-portada-acento"  style="display:flex;">
     <button class="w3-bar-item w3-button tablink w3-bottombar w3-border-blue-gray" onclick="openTab(event,'Principal')">Información General</button>
     <button class="w3-bar-item w3-button w3-bottombar tablink" onclick="openTab(event,'Contenidos')">Tabla de Contenidos</button>
@@ -44,22 +43,45 @@
     <div class="w3-row">
       <div class="w3-col l4 m5 s12 w3-container w3-center w3-padding-24">
         <img src="Portada.jpg" alt="Portada del libro" class="portada">
-        <p class="w3-small w3-text-grey w3-margin-top">ISBN: 9798280896468 ***</p>
-        <a href="https://www.amazon.es/dp/9798280896468" class="w3-button btn-amazon w3-large w3-round w3-block w3-margin-top">Comprar en Amazon</a>
+        <!--<p class="w3-small w3-text-grey w3-margin-top">ISBN: 9798280896468 ***</p>
+        <h4>Detalles Técnicos</h4>-->
+        <ul class="w3-ul" style="text-align: left;">
+          <li>&nbsp;</li>
+          <li><b>ISBN:</b> 9798280896468</li>
+          <li><b>Idioma:</b> Español</li>
+          <li><b>Color:</b> Blanco y negro</li>
+          <li><b>Dimensiones:</b> 7" x 10" (17.78 cm x 25.40 cm)</li>
+          <li><b>Tapa:</b> Blanda</li>
+          <li><b>Extensión:</b> 646 páginas, 170 figuras</li>
+          <!--<li><b>Contenido:</b> Ecuaciones lineales con coeficientes constantes. Ecuaciones lineales con coeficientes variables. Ecuaciones no lineales.</li>
+          <li><b>Extras:</b> Apéndices sobre números complejos, teoría espectral y cálculo diferencial.</li>-->
+        </ul>
+
+        <a href="https://www.amazon.es/dp/9798280896468" class="w3-button btn-amazon w3-large w3-round w3-block w3-margin-top" target="_blank" rel="noopener noreferrer">Comprar en Amazon</a>
       </div>
       <div class="w3-col l8 m7 s12 w3-container w3-padding-large">
         <h3 class="texto-principal"><b>Sobre el libro</b></h3>
+      <!--
         <p class="w3-justify">Este manual nace de la experiencia docente en el Grado en Matemáticas de la Universidad de Zaragoza [2]. Su filosofía es <b>"motivar los conceptos antes de su formalización"</b>, evitando demostrar teoremas antes de que el estudiante intuya su necesidad [2].</p>
-        <p class="w3-justify">Con <b>646 páginas</b>, el texto integra aplicaciones reales y figuras de alta calidad generadas mediante <b>TikZ, Python y Matplotlib</b> [3, 4].</p>
+        <p class="w3-justify">Con <b>646 páginas</b>, el texto integra multitud de ejemplos resueltos y ejercicios propuestos, y también aplicaciones reales. Está ilustrado con <b>170 figuras</b> de alta calidad generadas mediante <b>TikZ, Python y Matplotlib</b>.</p>
         <div class="w3-panel w3-light-grey w3-leftbar w3-border-red">
           <p class="w3-medium w3-serif"><i>"Se comienza estudiando los casos más sencillos, para ir progresando en dificultad hasta llegar al estudio del caso general" [2].</i></p>
         </div>
-        <h4>Detalles Técnicos</h4>
-        <ul class="w3-ul">
-          <li><b>Extensión:</b> 646 páginas.</li>
-          <li><b>Contenido:</b> Ecuaciones lineales (CC y CV) y sistemas no lineales [5, 6].</li>
-          <li><b>Extras:</b> Apéndices sobre complejos, teoría espectral y cálculo [5].</li>
-        </ul>
+      -->
+        <p class="w3-justify">
+          Este manual surge de la experiencia docente del autor en la Universidad de Zaragoza, donde ha impartido asignaturas relacionadas con ecuaciones diferenciales, teoría de sistemas dinámicos y teoría de control. La orientación adoptada es deliberadamente conceptual: se prioriza la motivación de los resultados antes de su formalización rigurosa, de modo que el estudiante perciba la necesidad de los teoremas antes de abordar sus demostraciones.
+        </p>
+
+        <p class="w3-justify">
+          El texto está dirigido a estudiantes de Matemáticas, Física e Ingeniería que deseen no solo adquirir destreza en la resolución de ecuaciones diferenciales ordinarias, sino también comprender en profundidad su estructura teórica y su relevancia en contextos aplicados.
+        </p>
+        <p class="w3-justify">
+          Con una extensión de 646 páginas, el libro incorpora un número elevado de ejemplos completamente resueltos, así como una amplia colección de ejercicios propuestos. Se incluyen, además, aplicaciones procedentes de problemas reales. El contenido se apoya en 170 figuras de alta calidad, generadas mediante TikZ, Python y Matplotlib, que refuerzan la comprensión geométrica y cualitativa de los conceptos.
+        </p>
+        <p class="w3-justify">
+          El material está concebido para cubrir dos asignaturas semestrales: una centrada en ecuaciones lineales y otra orientada a una introducción sistemática a las ecuaciones no lineales. El tratamiento abarca desde técnicas explícitas de resolución hasta el análisis cualitativo, incluyendo el estudio de la estabilidad de soluciones.
+        </p>
+
       </div>
     </div>
   </div>
@@ -159,8 +181,11 @@
 
 </div>
 
+<!-- Un poco de espacio -->
 <div class="w3-margin-bottom"></div>
+
 <script>
+/* Función que maneja los tabs */
 function openTab(evt, tabName) {
   var i, x, tablinks;
   // Ocultar todas las pestañas
@@ -178,7 +203,6 @@ function openTab(evt, tabName) {
   // Añadir el color rojo al botón que recibió el clic
   evt.currentTarget.classList.add("w3-border-blue-gray");
 }
-
 </script>
 
 </body>
